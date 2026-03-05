@@ -14,7 +14,8 @@ public class AuthController {
     // Cuando alguien envíe sus datos a /auth/login, el método se activa.
     @PostMapping("/login")
     public String login(@RequestBody LoginRequest loginRequest) {
-        return jwtService.generateToken(loginRequest.getUsername()); // el controlador le pide al servicio que genere el
-                                                                     // token
+        System.out.println("El usuario " + loginRequest.getUsername() + " está intentando entrar");
+        return jwtService.generateToken(loginRequest.getUsername()); // el controlador le pide al servicio que genere el token
+
     }
 }
