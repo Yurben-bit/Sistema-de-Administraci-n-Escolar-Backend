@@ -6,6 +6,6 @@ import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    // Este método buscará en la tabla 'usuarios' por la columna 'username'
+    // Este método buscará la tabla 'usuarios' por la columna 'username'
     Optional<User> findByUsername(String username);
 }
