@@ -3,10 +3,12 @@ package com.tecmilenio.edutec.security;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import io.jsonwebtoken.Claims;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.security.Key;
+
 
 @Service // Le dice a Spring que esta clase es un componente que puede ser inyectado en
          // otros lados.
@@ -24,6 +26,14 @@ public class JwtService {
                 // Fíjate en el orden: primero la llave, luego el algoritmo
                 .signWith(KEY, SignatureAlgorithm.HS256)
                 .compact();
+    }
+    public String extractUsername(String token) {
+        return Jwts.parserBuilder()
+                .setSigningKey(KEY)
+                .build()
+                .parseClaimsJws(token)
+                .getBody()
+                .getSubject();
     }
 
 }
