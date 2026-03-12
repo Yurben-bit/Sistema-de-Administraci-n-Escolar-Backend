@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+<<<<<<< HEAD
     <mapping directory="$USER_HOME$/OneDrive/Desktop/AppsWeb/inscripciones" vcs="Git" />
+=======
+>>>>>>> d8e0ea386ed945dca75083e95d8eb78ce0aad9e0
   </component>
 </project>
