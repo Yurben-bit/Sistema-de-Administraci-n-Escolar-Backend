@@ -1,15 +1,47 @@
 spring:
   datasource:
 
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/Escuela_db
+    #      Localhost Oracle
+    #    url: jdbc:oracle:thin:@//localhost:11521/OperaUserAccessRequisition
+    #    username: OperaUserAccessRequisitionUser
+    #    password: qwerty2022
+    #    driver-class-name: oracle.jdbc.OracleDriver
+
+
+    #        Remote (Olan's server)
+    #    url: jdbc:sqlserver://127.0.0.1:14000;databaseName=TestDatabase
+    #    username: Jesus
+    #    password: 250305Jl@
+    #    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    #        Localhost
+#    url: jdbc:sqlserver://localhost:1433;database=ExpedienteClinicoUniSurEneAbr2026
+#    username: sa
+#    password: 12345
+#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+
+    #        Localhost MySQL
+    url: jdbc:mysql://localhost:3306/escuela_db
     username: root
     password:
-
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+
   jpa:
     hibernate:
-      ddl-auto: update # Options: none, update, create, create-drop, validate
-    show-sql: true
+      ddl-auto: update
     properties:
       hibernate:
+        #dialect: org.hibernate.dialect.SQLServerDialect
         dialect: org.hibernate.dialect.MySQLDialect
+
+        jdbc:
+          time_zone: UTC-5
+
+#logging.level:
+#Uncomment for extensive SQL logging
+#org.hibernate.SQL: DEBUG
+#org.hibernate.type: TRACE
+#org.hibernate.search.fulltext_query: DEBUG
