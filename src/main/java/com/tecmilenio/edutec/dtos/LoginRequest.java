@@ -1,4 +1,4 @@
-package com.tecmilenio.edutec.dto;
+package com.tecmilenio.edutec.dtos;
 
 public class LoginRequest {
     private String username;
