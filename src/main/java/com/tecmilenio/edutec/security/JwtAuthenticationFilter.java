@@ -1,6 +1,6 @@
 package com.tecmilenio.edutec.security;
 
-// Cambia jakarta por javax
+
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
