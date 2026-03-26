@@ -1,0 +1,35 @@
+﻿[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.escolar:com.escolar:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-starter-data-jpa:jar -> duplicate declaration of version (?) @ line 34, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ----------------------< com.escolar:com.escolar >-----------------------
+[INFO] Building com.escolar 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:3.1.0:resources (default-resources)'
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ com.escolar ---
+[INFO] Deleting C:\Users\jordy\OneDrive\Documentos\EduTec-Backend\Sistema-de-Administraci-n-Escolar-Backend\target
+[INFO] 
+[INFO] --- resources:3.1.0:resources (default-resources) @ com.escolar ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ com.escolar ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 37 source files to C:\Users\jordy\OneDrive\Documentos\EduTec-Backend\Sistema-de-Administraci-n-Escolar-Backend\target\classes
+[INFO] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java: C:\Users\jordy\OneDrive\Documentos\EduTec-Backend\Sistema-de-Administraci-n-Escolar-Backend\src\main\java\com\tecmilenio\edutec\services\PayPalService.java uses or overrides a deprecated API.
+[INFO] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java: Recompile with -Xlint:deprecation for details.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.818 s
+[INFO] Finished at: 2026-03-26T01:10:27-05:00
+[INFO] ------------------------------------------------------------------------

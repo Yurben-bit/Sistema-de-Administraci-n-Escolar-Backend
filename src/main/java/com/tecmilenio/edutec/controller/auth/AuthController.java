@@ -33,9 +33,7 @@ public class AuthController {
             String passwordEnviado = loginRequest.getPassword();
             String passwordEnDb = userOptional.get().getPassword();
 
-
             boolean coinciden = passwordEncoder.matches(passwordEnviado, passwordEnDb);
-
 
             if (coinciden) {
                 String token = jwtService.generateToken(loginRequest.getUsername());

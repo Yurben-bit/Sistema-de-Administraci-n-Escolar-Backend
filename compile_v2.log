@@ -1,0 +1,179 @@
+﻿[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.escolar:com.escolar:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.springframework.boot:spring-boot-starter-data-jpa:jar -> duplicate declaration of version (?) @ line 34, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ----------------------< com.escolar:com.escolar >-----------------------
+[INFO] Building com.escolar 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'propertiesEncoding' is unknown for plugin 'maven-resources-plugin:3.1.0:resources (default-resources)'
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ com.escolar ---
+[INFO] Deleting C:\Users\jordy\OneDrive\Documentos\EduTec-Backend\Sistema-de-Administraci-n-Escolar-Backend\target
+[INFO] 
+[INFO] --- resources:3.1.0:resources (default-resources) @ com.escolar ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ com.escolar ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 37 source files to C:\Users\jordy\OneDrive\Documentos\EduTec-Backend\Sistema-de-Administraci-n-Escolar-Backend\target\classes
+[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/controller/PaymentController.java:[30,61] cannot find symbol
+  symbol:   method getMontoAbono()
+  location: variable request of type com.tecmilenio.edutec.dto.request.PaymentRequestDTO
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PaymentService.java:[61,16] constructor InitSessionResponseDTO in class com.tecmilenio.edutec.dto.response.InitSessionResponseDTO cannot be applied to given types;
+  required: no arguments
+  found:    java.util.UUID,java.math.BigDecimal,java.math.BigDecimal,java.time.LocalDateTime
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PaymentService.java:[91,39] method createOrder in class com.tecmilenio.edutec.services.PayPalService cannot be applied to given types;
+  required: java.lang.Double,java.lang.String,java.lang.String
+  found:    java.math.BigDecimal,java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PaymentService.java:[92,47] incompatible types: java.math.BigDecimal cannot be converted to java.lang.Double
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PaymentService.java:[118,24] cannot find symbol
+  symbol:   method getPurchaseUnits()
+  location: variable captura of type com.tecmilenio.edutec.dto.response.PayPalOrderResponseDTO
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PaymentService.java:[175,16] constructor PagoResponseDTO in class com.tecmilenio.edutec.dto.response.PagoResponseDTO cannot be applied to given types;
+  required: no arguments
+  found:    boolean,java.math.BigDecimal,java.math.BigDecimal,java.math.BigDecimal,java.math.BigDecimal,java.math.BigDecimal,exitoso ? [...]ado."
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PaymentService.java:[197,27] constructor MovimientoDTO in class com.tecmilenio.edutec.dto.response.EstadoCuentaDTO.MovimientoDTO cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.math.BigDecimal,java.time.LocalDateTime
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PaymentService.java:[202,25] incompatible types: inference variable T has incompatible bounds
+    equality constraints: com.tecmilenio.edutec.dto.response.EstadoCuentaDTO.MovimientoDTO
+    lower bounds: java.lang.Object
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PaymentService.java:[204,16] constructor EstadoCuentaDTO in class com.tecmilenio.edutec.dto.response.EstadoCuentaDTO cannot be applied to given types;
+  required: no arguments
+  found:    java.math.BigDecimal,java.math.BigDecimal,java.util.List<com.tecmilenio.edutec.dto.response.EstadoCuentaDTO.MovimientoDTO>
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java:[25,35] cannot find symbol
+  symbol:   method getClientId()
+  location: variable payPalConfig of type com.tecmilenio.edutec.config.PayPalConfig
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java:[25,70] cannot find symbol
+  symbol:   method getClientSecret()
+  location: variable payPalConfig of type com.tecmilenio.edutec.config.PayPalConfig
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java:[30,42] cannot find symbol
+  symbol:   method getClientId()
+  location: variable payPalConfig of type com.tecmilenio.edutec.config.PayPalConfig
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java:[30,70] cannot find symbol
+  symbol:   method getClientSecret()
+  location: variable payPalConfig of type com.tecmilenio.edutec.config.PayPalConfig
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java:[38,29] cannot find symbol
+  symbol:   method getBaseUrl()
+  location: variable payPalConfig of type com.tecmilenio.edutec.config.PayPalConfig
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java:[44,38] cannot find symbol
+  symbol:   method getAccessToken()
+  location: class com.tecmilenio.edutec.dto.response.PayPalTokenResponseDTO
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java:[74,29] cannot find symbol
+  symbol:   method getBaseUrl()
+  location: variable payPalConfig of type com.tecmilenio.edutec.config.PayPalConfig
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java:[90,29] cannot find symbol
+  symbol:   method getBaseUrl()
+  location: variable payPalConfig of type com.tecmilenio.edutec.config.PayPalConfig
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/controller/AdminController.java:[34,24] cannot find symbol
+  symbol:   method getIdAlumno()
+  location: variable request of type com.tecmilenio.edutec.controller.AdminController.CargoRequestDTO
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/controller/AdminController.java:[35,24] cannot find symbol
+  symbol:   method getConcepto()
+  location: variable request of type com.tecmilenio.edutec.controller.AdminController.CargoRequestDTO
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/controller/AdminController.java:[36,24] cannot find symbol
+  symbol:   method getMonto()
+  location: variable request of type com.tecmilenio.edutec.controller.AdminController.CargoRequestDTO
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/controller/auth/AuthController.java:[34,53] cannot find symbol
+  symbol:   method getPassword()
+  location: class com.tecmilenio.edutec.model.User
+[INFO] 21 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.245 s
+[INFO] Finished at: 2026-03-26T01:07:52-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile (default-compile) on project com.escolar: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/controller/PaymentController.java:[30,61] cannot find symbol
+[ERROR]   symbol:   method getMontoAbono()
+[ERROR]   location: variable request of type com.tecmilenio.edutec.dto.request.PaymentRequestDTO
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PaymentService.java:[61,16] constructor InitSessionResponseDTO in class com.tecmilenio.edutec.dto.response.InitSessionResponseDTO cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.util.UUID,java.math.BigDecimal,java.math.BigDecimal,java.time.LocalDateTime
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PaymentService.java:[91,39] method createOrder in class com.tecmilenio.edutec.services.PayPalService cannot be applied to given types;
+[ERROR]   required: java.lang.Double,java.lang.String,java.lang.String
+[ERROR]   found:    java.math.BigDecimal,java.lang.String
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PaymentService.java:[92,47] incompatible types: java.math.BigDecimal cannot be converted to java.lang.Double
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PaymentService.java:[118,24] cannot find symbol
+[ERROR]   symbol:   method getPurchaseUnits()
+[ERROR]   location: variable captura of type com.tecmilenio.edutec.dto.response.PayPalOrderResponseDTO
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PaymentService.java:[175,16] constructor PagoResponseDTO in class com.tecmilenio.edutec.dto.response.PagoResponseDTO cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    boolean,java.math.BigDecimal,java.math.BigDecimal,java.math.BigDecimal,java.math.BigDecimal,java.math.BigDecimal,exitoso ? [...]ado."
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PaymentService.java:[197,27] constructor MovimientoDTO in class com.tecmilenio.edutec.dto.response.EstadoCuentaDTO.MovimientoDTO cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.math.BigDecimal,java.time.LocalDateTime
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PaymentService.java:[202,25] incompatible types: inference variable T has incompatible bounds
+[ERROR]     equality constraints: com.tecmilenio.edutec.dto.response.EstadoCuentaDTO.MovimientoDTO
+[ERROR]     lower bounds: java.lang.Object
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PaymentService.java:[204,16] constructor EstadoCuentaDTO in class com.tecmilenio.edutec.dto.response.EstadoCuentaDTO cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.math.BigDecimal,java.math.BigDecimal,java.util.List<com.tecmilenio.edutec.dto.response.EstadoCuentaDTO.MovimientoDTO>
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java:[25,35] cannot find symbol
+[ERROR]   symbol:   method getClientId()
+[ERROR]   location: variable payPalConfig of type com.tecmilenio.edutec.config.PayPalConfig
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java:[25,70] cannot find symbol
+[ERROR]   symbol:   method getClientSecret()
+[ERROR]   location: variable payPalConfig of type com.tecmilenio.edutec.config.PayPalConfig
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java:[30,42] cannot find symbol
+[ERROR]   symbol:   method getClientId()
+[ERROR]   location: variable payPalConfig of type com.tecmilenio.edutec.config.PayPalConfig
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java:[30,70] cannot find symbol
+[ERROR]   symbol:   method getClientSecret()
+[ERROR]   location: variable payPalConfig of type com.tecmilenio.edutec.config.PayPalConfig
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java:[38,29] cannot find symbol
+[ERROR]   symbol:   method getBaseUrl()
+[ERROR]   location: variable payPalConfig of type com.tecmilenio.edutec.config.PayPalConfig
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java:[44,38] cannot find symbol
+[ERROR]   symbol:   method getAccessToken()
+[ERROR]   location: class com.tecmilenio.edutec.dto.response.PayPalTokenResponseDTO
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java:[74,29] cannot find symbol
+[ERROR]   symbol:   method getBaseUrl()
+[ERROR]   location: variable payPalConfig of type com.tecmilenio.edutec.config.PayPalConfig
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/services/PayPalService.java:[90,29] cannot find symbol
+[ERROR]   symbol:   method getBaseUrl()
+[ERROR]   location: variable payPalConfig of type com.tecmilenio.edutec.config.PayPalConfig
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/controller/AdminController.java:[34,24] cannot find symbol
+[ERROR]   symbol:   method getIdAlumno()
+[ERROR]   location: variable request of type com.tecmilenio.edutec.controller.AdminController.CargoRequestDTO
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/controller/AdminController.java:[35,24] cannot find symbol
+[ERROR]   symbol:   method getConcepto()
+[ERROR]   location: variable request of type com.tecmilenio.edutec.controller.AdminController.CargoRequestDTO
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/controller/AdminController.java:[36,24] cannot find symbol
+[ERROR]   symbol:   method getMonto()
+[ERROR]   location: variable request of type com.tecmilenio.edutec.controller.AdminController.CargoRequestDTO
+[ERROR] /C:/Users/jordy/OneDrive/Documentos/EduTec-Backend/Sistema-de-Administraci-n-Escolar-Backend/src/main/java/com/tecmilenio/edutec/controller/auth/AuthController.java:[34,53] cannot find symbol
+[ERROR]   symbol:   method getPassword()
+[ERROR]   location: class com.tecmilenio.edutec.model.User
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
