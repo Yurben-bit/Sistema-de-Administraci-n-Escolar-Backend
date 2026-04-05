@@ -40,10 +40,23 @@ public class PayPalOrderResponseDTO {
     public static class Capture {
         private String id;
         private String status;
+        private Amount amount;
+
         public Capture() {}
         public String getId() { return id; }
         public void setId(String id) { this.id = id; }
         public String getStatus() { return status; }
         public void setStatus(String status) { this.status = status; }
+        public Amount getAmount() { return amount; }
+        public void setAmount(Amount amount) { this.amount = amount; }
+    }
+
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    public static class Amount {
+        private String value;
+
+        public Amount() {}
+        public String getValue() { return value; }
+        public void setValue(String value) { this.value = value; }
     }
 }

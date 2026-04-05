@@ -82,11 +82,16 @@ public class PaymentService {
             return new PagoResponseDTO(false, BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, "El pago no fue completado en PayPal.");
         }
 
-        // Obtener monto real cobrado desde la captura de PayPal
+        // Extraer el monto real cobrado desde la respuesta de captura de PayPal
         BigDecimal montoCobrado = BigDecimal.ZERO;
-        if (captura.getPurchaseUnits() != null && !captura.getPurchaseUnits().isEmpty()) {
-            // Intentar extraer el monto (simplificado para este ejemplo)
-            montoCobrado = t.getMontoSolicitado(); 
+        try {
+            String valorCapturado = captura.getPurchaseUnits().get(0)
+                    .getPayments().getCaptures().get(0)
+                    .getAmount().getValue();
+            montoCobrado = new BigDecimal(valorCapturado);
+        } catch (Exception e) {
+            // Si PayPal no devuelve el monto por algun motivo, usamos el solicitado como fallback
+            montoCobrado = t.getMontoSolicitado();
         }
 
         boolean exitoso = false;
@@ -98,7 +103,9 @@ public class PaymentService {
         BigDecimal favorNva = BigDecimal.ZERO;
 
         if (montoCobrado.compareTo(t.getMontoSolicitado()) >= 0) {
-            CuentaAlumno cuenta = cuentaRepo.findById(t.getIdAlumno()).get();
+            // BUG #3 FIX: usar bloqueo pesimista para evitar condicion de carrera
+            CuentaAlumno cuenta = cuentaRepo.findByIdAlumnoParaEscritura(t.getIdAlumno())
+                    .orElseThrow(() -> new RuntimeException("Cuenta no encontrada al procesar pago"));
             
             deudaAnt = cuenta.getSaldoPendiente();
             favorAnt = cuenta.getSaldoAFavor();
@@ -156,7 +163,8 @@ public class PaymentService {
 
     @Transactional
     public void crearCargo(UUID idAlumno, MovimientoCuenta.ConceptoCargo concepto, BigDecimal monto) {
-        CuentaAlumno cuenta = cuentaRepo.findById(idAlumno)
+        // BUG #3 FIX: usar bloqueo pesimista para evitar condicion de carrera al modificar saldos
+        CuentaAlumno cuenta = cuentaRepo.findByIdAlumnoParaEscritura(idAlumno)
                 .orElseThrow(() -> new RuntimeException("Cuenta no encontrada"));
 
         // Primero intentar cobrar del saldo a favor
