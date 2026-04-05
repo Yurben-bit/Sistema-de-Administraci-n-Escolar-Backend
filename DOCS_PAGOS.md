@@ -2,7 +2,7 @@
 
 Este documento explica cómo utilizar y probar el módulo de pagos integrado en el backend de EduTec.
 
-## 🚀 Cómo funciona el Flujo de Pago
+## Cómo funciona el Flujo de Pago
 
 Hemos implementado un flujo basado en sesiones para garantizar la seguridad y el seguimiento de cada transacción.
 
@@ -32,7 +32,7 @@ Una vez que el usuario aprueba el pago en la interfaz de PayPal, el sistema debe
 
 ---
 
-## 📊 Lógica de Distribución de Dinero
+## Lógica de Distribución de Dinero
 
 El sistema es "inteligente":
 *   Si un alumno debe $500 y paga $600:
@@ -42,7 +42,7 @@ El sistema es "inteligente":
 
 ---
 
-## 🛠️ Configuración (application.properties)
+## Configuración (application.properties)
 
 Para que funcione, asegúrate de tener estas propiedades configuradas con tus credenciales de [PayPal Developer](https://developer.paypal.com/):
 
@@ -54,7 +54,7 @@ paypal.mode=sandbox
 
 ---
 
-## 📋 Endpoints Rápidos (API Reference)
+## Endpoints Rápidos (API Reference)
 
 | Método | Endpoint | Descripción |
 | :--- | :--- | :--- |

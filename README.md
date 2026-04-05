@@ -21,7 +21,7 @@ Este repositorio corresponde al módulo backend, encargado de la lógica del sis
 - Conexión con el frontend
 - Sistema de inscripciones
 - Consulta de calificaciones
-- **Sistema de Pagos y Finanzas (PayPal)**
+- Sistema de Pagos y Finanzas (PayPal)
 - Comunicación con el frontend
 
 ### Requerimientos No Funcionales
@@ -55,13 +55,8 @@ Hemos completado con éxito la integración del módulo de pagos con PayPal. El 
 - Gestión de Deuda y Saldo a Favor automático
 - Registro histórico de movimientos
 
-## Documentación Adicional
 
-Para más detalles, consulta nuestras guías específicas:
-- [📖 Guía Técnica de Pagos](DOCS_PAGOS.md)
-- [🎤 Guía de Presentación del Proyecto](GUIA_PRESENTACION.md)
-
-
+- [Guía Técnica de Pagos](DOCS_PAGOS.md)
 
 ## Notas
 
