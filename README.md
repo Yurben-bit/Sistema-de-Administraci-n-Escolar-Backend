@@ -20,7 +20,8 @@ Este repositorio corresponde al módulo backend, encargado de la lógica del sis
 - Almacenamiento de datos de usuarios
 - Conexión con el frontend
 - Sistema de inscripciones
-- Consulta  de calificaciones
+- Consulta de calificaciones
+- **Sistema de Pagos y Finanzas (PayPal)**
 - Comunicación con el frontend
 
 ### Requerimientos No Funcionales
@@ -47,8 +48,18 @@ Este repositorio corresponde al módulo backend, encargado de la lógica del sis
 
 ## Estado del Proyecto
 
-Fase inicial de desarrollo.
-Actualmente se trabaja en la implementación del sistema de autenticación y registro.
+**Fase Actual: Beta / Desarrollo Avanzado**
+Hemos completado con éxito la integración del módulo de pagos con PayPal. El sistema ahora soporta:
+- Consulta de Estado de Cuenta
+- Generación de órdenes de pago
+- Gestión de Deuda y Saldo a Favor automático
+- Registro histórico de movimientos
+
+## Documentación Adicional
+
+Para más detalles, consulta nuestras guías específicas:
+- [📖 Guía Técnica de Pagos](DOCS_PAGOS.md)
+- [🎤 Guía de Presentación del Proyecto](GUIA_PRESENTACION.md)
 
 
 
